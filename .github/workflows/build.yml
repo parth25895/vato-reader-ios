@@ -47,8 +47,8 @@ jobs:
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
             build > build.log 2>&1
           STATUS=$?
-          grep -E "error:|warning: unre|BUILD (SUCCEEDED|FAILED)" build.log | grep -v "^note" | sort -u | head -200 > errors.txt
-          tail -40 build.log >> errors.txt
+          grep -E -A3 "^/.*: error: " build.log | head -400 > errors.txt
+          grep -E "BUILD (SUCCEEDED|FAILED)" build.log >> errors.txt || true
           cat errors.txt
           exit $STATUS
 

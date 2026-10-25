@@ -102,7 +102,7 @@ enum Typo {
         Font(uiFont(id, size: size))
     }
     /// Gujarati UI text (titles, list rows) in the user's chosen reading font.
-    static func gu(_ store: Store, _ size: CGFloat) -> Font { font(store.s.rfont, size: size) }
+    @MainActor static func gu(_ store: Store, _ size: CGFloat) -> Font { font(store.s.rfont, size: size) }
 
     static let display = Font.system(size: 34, weight: .semibold, design: .serif)
     static let title = Font.system(size: 22, weight: .semibold, design: .serif)
