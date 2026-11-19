@@ -1,7 +1,7 @@
-# Vato Reader for iOS
+# Vato Reader
 
-A personal SwiftUI reader for Swamini Vato (3,825 vato, offline), with rounds, sittings, progress analytics, highlights, notes, tags, bookmarks, review, six Gujarati fonts and reading backgrounds.
+A web reader for Swamini Vato, 3,825 vato.
 
-Built by GitHub Actions on every push to `main` (see `.github/workflows/build.yml`). The unsigned `VatoReader.ipa` is published to the **latest** release; install it with AltStore or SideStore.
+Open `index.html` in a browser (keep `swamini-vato.json` next to it).
 
-Fonts are from Google Fonts under the SIL Open Font License (see `VatoReader/Resources/Fonts/OFL-LICENSE.txt`).
+The iOS app is retired. Its code is kept in `archive/ios/`.
